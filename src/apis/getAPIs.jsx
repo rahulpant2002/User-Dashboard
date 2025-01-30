@@ -1,7 +1,7 @@
 import axios from "axios";
 import { API_URL } from "../utils/constant";
 
-const getUsers = async()=>{
+export const getUsers = async()=>{
     try {
         const response = await axios.get(API_URL);
         return response.data;
