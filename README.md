@@ -13,3 +13,5 @@
   Created the feature of Add a User.
 
   Added the Delete User Feature.
+
+  Added the Edit User Detail Feature.
