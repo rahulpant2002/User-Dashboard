@@ -1,3 +1,4 @@
 ## User Management Dashboard
   Initialised a Vite + React project.
-  DaisyUI added fo making clean UI.
+  DaisyUI added for making clean UI.
+  Created Basic Folder Structure.
