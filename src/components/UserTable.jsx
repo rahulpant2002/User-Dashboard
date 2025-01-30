@@ -1,20 +1,6 @@
-import { useEffect, useState } from "react";
-import {getUsers} from "../apis/getAPIs"
+import { Link } from "react-router-dom";
 
-const UserTable = () => {
-    const [allUsers, setAllUsers] = useState();
-    
-    const fetchAllUsers = async()=>{
-        const data = await getUsers();
-        setAllUsers(data);
-    }
-
-    useEffect(()=>{
-        fetchAllUsers();
-    }, []);
-
-    console.log(allUsers);
-
+const UserTable = ({allUsers, setAllUsers}) => {
     return(
         <div className="overflow-x-auto">
             <table className="table bg-gradient-to-r ">
@@ -33,18 +19,18 @@ const UserTable = () => {
                 <tbody>
                 
                 {
-                    allUsers?.map(user => {
+                    allUsers?.map((user) => {
                         const {id, name, email, company} = user;
-                        const [firstName, lastName] = name.split(' ');
+                        const [firstName, lastName] = name?.split(' ');
 
                         return(
-                            <tr>
+                            <tr key={id}>
                                 <th>{id}</th>
                                 <td>{firstName}</td>
                                 <td>{lastName}</td>
                                 <td>{email}</td>
                                 <td>{company?.name}</td>
-                                <td>✏️</td>
+                                <td><Link to={`/edit/${id}`} >✏️</Link></td>
                                 <td>🗑</td>
                             </tr>
                         )

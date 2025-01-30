@@ -6,3 +6,8 @@
   Created The NavBar
 
   Fetched allUsers and Displayed in Table.
+  Fetch a User By ID is created.
+
+  Lifting Up of State, so as to access the All Users info in every Component
+
+  Created the feature of Add a User.

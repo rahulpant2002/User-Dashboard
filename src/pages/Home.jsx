@@ -1,10 +1,10 @@
 import React from 'react'
 import UserTable from '../components/UserTable'
 
-const Home = () => {
+const Home = ({allUsers, setAllUsers}) => {
   return (
-    <UserTable />
+    <UserTable allUsers={allUsers} setAllUsers={setAllUsers} />
   )
 }
 
-export default Home
+export default Home;
