@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { addUser } from "../apis/addAPI";
 import { useNavigate } from "react-router-dom";
 
-const AddUser = ({allUsers, setAllUsers }) => {
+const AddUser = ({ allUsers, setAllUsers }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [department, setDepartment] = useState("");
@@ -11,7 +11,7 @@ const AddUser = ({allUsers, setAllUsers }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const newUser = { name, email, company : {name : department} };
+    const newUser = { name, email, company: { name: department } };
     const addedUser = await addUser(newUser);
     if (addedUser) {
       setAllUsers(prevUsers => [...prevUsers, addedUser]);
@@ -23,7 +23,7 @@ const AddUser = ({allUsers, setAllUsers }) => {
   };
 
   return (
-    <div className="my-6 p-4 shadow-md rounded-lg w-[35%] mx-auto">
+    <div className="my-6 p-4 shadow-md rounded-lg w-full sm:w-96 md:w-1/2 lg:w-1/3 mx-auto">
       <h3 className="text-lg font-bold mb-4 text-center">Add New User</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
