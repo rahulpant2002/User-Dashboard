@@ -23,11 +23,11 @@ const AddUser = ({ allUsers, setAllUsers }) => {
   };
 
   return (
-    <div className="my-6 p-4 shadow-md rounded-lg w-full sm:w-96 md:w-1/2 lg:w-1/3 mx-auto">
+    <div className="my-6 p-4 shadow-md bg-white font-semibold text-gray-700 rounded-lg w-full sm:w-96 md:w-1/2 lg:w-1/3 mx-auto">
       <h3 className="text-lg font-bold mb-4 text-center">Add New User</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-white font-bold" htmlFor="name">Name</label>
+          <label className="block font-bold" htmlFor="name">Name</label>
           <input
             id="firstName"
             type="text"
@@ -39,7 +39,7 @@ const AddUser = ({ allUsers, setAllUsers }) => {
         </div>
     
         <div className="mb-4">
-          <label className="block text-white font-bold" htmlFor="email">Email</label>
+          <label className="block font-bold" htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
@@ -50,7 +50,7 @@ const AddUser = ({ allUsers, setAllUsers }) => {
           />
         </div>
         <div className="mb-4">
-          <label className="block text-white font-bold" htmlFor="department">Department</label>
+          <label className="block font-bold" htmlFor="department">Department</label>
           <input
             id="department"
             type="text"
