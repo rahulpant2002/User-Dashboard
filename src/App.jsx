@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home allUsers={allUsers} setAllUsers={setAllUsers} />} />
             <Route path="/add" element={<AddUser allUsers={allUsers} setAllUsers={setAllUsers}/>} />
-            <Route path="/edit/:id" element={<EditUser setAllUsers={setAllUsers} />} />
+            <Route path="/edit/:id" element={<EditUser allUsers={allUsers} setAllUsers={setAllUsers} />} />
           </Routes>
         </Body>
       </div>

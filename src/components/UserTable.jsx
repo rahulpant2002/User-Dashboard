@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import { deleteUser } from "../apis/deleteAPI";
 
 const UserTable = ({allUsers, setAllUsers}) => {
+    
+    const handleDeleteUser = async(id)=>{
+        const success = await deleteUser(id);
+        if (success) {
+            const filteredRes = allUsers.filter(user => user.id !== id);
+            setAllUsers(filteredRes);
+        }
+    }
+
     return(
         <div className="overflow-x-auto">
             <table className="table bg-gradient-to-r ">
@@ -31,7 +41,7 @@ const UserTable = ({allUsers, setAllUsers}) => {
                                 <td>{email}</td>
                                 <td>{company?.name}</td>
                                 <td><Link to={`/edit/${id}`} >✏️</Link></td>
-                                <td>🗑</td>
+                                <td> <button className="cursor-pointer" onClick={()=>handleDeleteUser(id)} >🗑</button> </td>
                             </tr>
                         )
                     })

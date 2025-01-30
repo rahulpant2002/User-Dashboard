@@ -11,3 +11,5 @@
   Lifting Up of State, so as to access the All Users info in every Component
 
   Created the feature of Add a User.
+
+  Added the Delete User Feature.
